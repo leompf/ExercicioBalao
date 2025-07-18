@@ -32,6 +32,11 @@
             btnConstruir = new Button();
             lblCor = new Label();
             grpboxBalao = new GroupBox();
+            lblDirecao = new Label();
+            rbtnSul = new RadioButton();
+            rbtnEste = new RadioButton();
+            rbtnNorte = new RadioButton();
+            rbtnOeste = new RadioButton();
             btnDescer = new Button();
             label2 = new Label();
             lblAltura = new Label();
@@ -46,11 +51,11 @@
             // lblMensagem
             // 
             lblMensagem.AutoSize = true;
+            lblMensagem.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMensagem.Location = new Point(49, 90);
             lblMensagem.Name = "lblMensagem";
-            lblMensagem.Size = new Size(66, 15);
+            lblMensagem.Size = new Size(0, 17);
             lblMensagem.TabIndex = 0;
-            lblMensagem.Text = "mensagem";
             // 
             // btnConstruir
             // 
@@ -74,6 +79,11 @@
             // 
             // grpboxBalao
             // 
+            grpboxBalao.Controls.Add(lblDirecao);
+            grpboxBalao.Controls.Add(rbtnSul);
+            grpboxBalao.Controls.Add(rbtnEste);
+            grpboxBalao.Controls.Add(rbtnNorte);
+            grpboxBalao.Controls.Add(rbtnOeste);
             grpboxBalao.Controls.Add(btnDescer);
             grpboxBalao.Controls.Add(label2);
             grpboxBalao.Controls.Add(lblAltura);
@@ -83,10 +93,75 @@
             grpboxBalao.Enabled = false;
             grpboxBalao.Location = new Point(49, 143);
             grpboxBalao.Name = "grpboxBalao";
-            grpboxBalao.Size = new Size(499, 132);
+            grpboxBalao.Size = new Size(497, 148);
             grpboxBalao.TabIndex = 4;
             grpboxBalao.TabStop = false;
             grpboxBalao.Text = "Estado do Balão";
+            // 
+            // lblDirecao
+            // 
+            lblDirecao.AutoSize = true;
+            lblDirecao.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDirecao.Location = new Point(24, 118);
+            lblDirecao.Name = "lblDirecao";
+            lblDirecao.Size = new Size(0, 20);
+            lblDirecao.TabIndex = 10;
+            // 
+            // rbtnSul
+            // 
+            rbtnSul.AutoSize = true;
+            rbtnSul.Enabled = false;
+            rbtnSul.Location = new Point(278, 86);
+            rbtnSul.Name = "rbtnSul";
+            rbtnSul.Size = new Size(41, 19);
+            rbtnSul.TabIndex = 9;
+            rbtnSul.TabStop = true;
+            rbtnSul.Text = "Sul";
+            rbtnSul.UseVisualStyleBackColor = true;
+            rbtnSul.CheckedChanged += RadioButton_CheckedChanged;
+            rbtnSul.EnabledChanged += RadioButton_EnabledChanged;
+            // 
+            // rbtnEste
+            // 
+            rbtnEste.AutoSize = true;
+            rbtnEste.Enabled = false;
+            rbtnEste.Location = new Point(226, 86);
+            rbtnEste.Name = "rbtnEste";
+            rbtnEste.Size = new Size(46, 19);
+            rbtnEste.TabIndex = 8;
+            rbtnEste.TabStop = true;
+            rbtnEste.Text = "Este";
+            rbtnEste.UseVisualStyleBackColor = true;
+            rbtnEste.CheckedChanged += RadioButton_CheckedChanged;
+            rbtnEste.EnabledChanged += RadioButton_EnabledChanged;
+            // 
+            // rbtnNorte
+            // 
+            rbtnNorte.AutoSize = true;
+            rbtnNorte.Enabled = false;
+            rbtnNorte.Location = new Point(164, 86);
+            rbtnNorte.Name = "rbtnNorte";
+            rbtnNorte.Size = new Size(55, 19);
+            rbtnNorte.TabIndex = 7;
+            rbtnNorte.TabStop = true;
+            rbtnNorte.Text = "Norte";
+            rbtnNorte.UseVisualStyleBackColor = true;
+            rbtnNorte.CheckedChanged += RadioButton_CheckedChanged;
+            rbtnNorte.EnabledChanged += RadioButton_EnabledChanged;
+            // 
+            // rbtnOeste
+            // 
+            rbtnOeste.AutoSize = true;
+            rbtnOeste.Enabled = false;
+            rbtnOeste.Location = new Point(104, 86);
+            rbtnOeste.Name = "rbtnOeste";
+            rbtnOeste.Size = new Size(55, 19);
+            rbtnOeste.TabIndex = 6;
+            rbtnOeste.TabStop = true;
+            rbtnOeste.Text = "Oeste";
+            rbtnOeste.UseVisualStyleBackColor = true;
+            rbtnOeste.CheckedChanged += RadioButton_CheckedChanged;
+            rbtnOeste.EnabledChanged += RadioButton_EnabledChanged;
             // 
             // btnDescer
             // 
@@ -118,6 +193,7 @@
             lblAltura.Size = new Size(13, 17);
             lblAltura.TabIndex = 3;
             lblAltura.Text = "-";
+            lblAltura.TextChanged += lblAltura_TextChanged;
             // 
             // label1
             // 
@@ -205,5 +281,10 @@
         private ComboBox cbbCor;
         private Button btnDescer;
         private Label label2;
+        private Label lblDirecao;
+        private RadioButton rbtnSul;
+        private RadioButton rbtnEste;
+        private RadioButton rbtnNorte;
+        private RadioButton rbtnOeste;
     }
 }

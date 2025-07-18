@@ -15,7 +15,15 @@
             set { _cor = value; }
         }
 
-        public string Direcao { get; set; } 
+        public string Direcao
+        {
+            get { return _direcao; }
+            set 
+            {
+                if (_altura != 0)
+                _direcao = value; 
+            }
+        }
 
         public int Altura
         {
